@@ -1,6 +1,7 @@
 .video-main-container{
     background-color: #181818;
-    min-height: calc(100vh - 76px);;
+    height: calc(100vh - 76px);
+    overflow-y: scroll;
     margin: 0px; padding: 0px;
     position: relative;
 }
@@ -35,4 +36,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.video-list-container{
+    background-color: #181818;
+    padding: 20px 50px;
+    height: calc(100vh - 133px);
+    overflow-y: scroll;
+}
+
+.video-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video-item{
+    cursor: pointer;
+    display: flex;
+    padding: 5px;
+}
+
+.video{
+    flex: 1;
 }

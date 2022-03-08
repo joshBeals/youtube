@@ -1,8 +1,9 @@
 import './VideoMain.css';
 import React from 'react';
 import { useEffect } from 'react';
-import Filter from '../Filters';
+import Filters from '../Filters';
 import Spinner from '../Spinner';
+import VideoItem from './VideoItem';
 import { connect } from 'react-redux';
 import { fetchAllVideos } from '../../actions';
 
@@ -24,13 +25,16 @@ const VideoMain = (props) => {
 
     const videosList = props.allVideos.map(video => {
         return(
-            <VideoItem key={video.etag} video={video} newVideo={newVideo} />
+            <VideoItem key={video.etag} video={video} />
         );
     });
 
     return(
-        <div>
-            {videosList}
+        <div style={{ backgroundColor: '#181818' }}>
+            <Filters />
+            <div className='video-list-container row g-0'>
+                {videosList}
+            </div>
         </div>
     );
 };
