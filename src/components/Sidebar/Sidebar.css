@@ -1,0 +1,12 @@
+.sidebar-container{
+    background-color: #202020;
+    height: calc(100vh - 76px);;
+    overflow-y: scroll;
+    margin: 0px; padding: 0px;
+}
+
+.sidebar-container::-webkit-scrollbar {
+    display: none;
+}
+
+
