@@ -1,15 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { storeSearchTerm } from '../actions';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
 
     const [term, setTerm] = useState('');
     const history = useHistory();
 
     const handleSearch = (e) => {
         e.preventDefault();
-        history.push('/search');
+        props.storeSearchTerm(term);
+        if(window.location.pathname !== '/search'){
+            history.push('/search');
+        }
     }
 
     return(
@@ -20,4 +25,8 @@ const SearchBar = () => {
     );
 }
 
-export default SearchBar;
+const mapStateToProps = state => {
+    return { searchTerm: state.searchTerm };
+}
+
+export default connect(mapStateToProps, { storeSearchTerm })(SearchBar);

@@ -1,0 +1,23 @@
+.result-main-container{
+    background-color: #181818;
+    height: calc(100vh - 76px);
+    overflow-y: scroll;
+    margin: 0px; padding: 0px;
+    position: relative;
+}
+
+.result-list-container{
+    background-color: #181818;
+    padding: 20px 0px;
+    height: calc(100vh - 76px);
+    overflow-y: scroll;
+}
+
+.result-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video-item{
+    cursor: pointer;
+    color: white;
+}

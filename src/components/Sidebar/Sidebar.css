@@ -9,4 +9,38 @@
     display: none;
 }
 
+.sidebar-container hr{
+    color: white;
+    margin: 20px 0px;
+    margin-right: 20px;
+}
+
+.sidebar-inner{
+    padding-top: 30px;
+}
+
+.sidebar-el{
+    margin: 0px;
+    list-style: none;
+    color: white;
+}
+
+.sidebar-el li{
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 8px 3px;
+    padding-left: 10px;
+}
+
+.sidebar-el li:hover{
+    background-color: #313131;
+}
+
+.sidebar-el li p {
+    padding: 0px; margin: 0px;
+}
+
+.sidebar-el li span {
+    margin-left: 20px;
+}
 
